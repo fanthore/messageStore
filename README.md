@@ -16,8 +16,13 @@ python
 paho-mq
 sqlite3
 
+## Starting up
+
 ```
-Examples
+$ python init.py
+$ ls owntracks.db
+owntacks.db
+$ sqlite owntracks.db .dump
 ```
 
 ## License
