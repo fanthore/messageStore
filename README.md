@@ -23,6 +23,31 @@ $ python init.py
 $ ls owntracks.db
 owntacks.db
 $ sqlite owntracks.db .dump
+-- Loading resources from /home/fanthore/.sqliterc
+
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE MQTT_devices (
+  id integer primary key autoincrement,
+  top text,
+  tid text,
+  acc integer,
+  bat integer,
+  lat real,
+  lon real,
+  tst integer
+, now text);
+DELETE FROM sqlite_sequence;
+INSERT INTO "sqlite_sequence" VALUES('MQTT_devices',0);
+COMMIT;
+
+```
+## Running it
+
+
+```
+$ python connect.py
+Connected to broker
 ```
 
 ## License
