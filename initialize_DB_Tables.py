@@ -12,7 +12,8 @@ create table MQTT_devices (
   bat integer,
   lat real,
   lon real,
-  tst integer
+  tst integer,
+  now text
 );
 
 
