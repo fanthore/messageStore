@@ -26,16 +26,16 @@ class DatabaseManager():
 # Function to push Device Location Data into Database
 
 def mqtt_device(Topic, jsonData):
-    now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     json_Dict = json.loads(jsonData)
 
     tid = json_Dict.get('tid', 'ukn')
     top = Topic
-    acc = json_Dict.get['acc', 999]
-    bat = json_Dict.get['batt', 101]
-    lat = json_Dict.get['lat', 0.0]
-    lon = json_Dict.get['lon', 0.0]
-    tst = json_Dict.get['tst', 1]
+    acc = json_Dict.get('acc', 99)
+    bat = json_Dict.get('batt', 101)
+    lat = json_Dict.get('lat', 0.1)
+    lon = json_Dict.get('lon', 0.1)
+    tst = json_Dict.get('tst', '1')
+    now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     
     #Push into DB Table
     dbObj = DatabaseManager()
