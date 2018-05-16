@@ -30,13 +30,12 @@ def mqtt_device(Topic, jsonData):
     json_Dict = json.loads(jsonData)
 
     tid = json_Dict.get('tid', 'ukn')
-
     top = Topic
-    acc = json_Dict['acc']
-    bat = json_Dict['batt']
-    lat = json_Dict['lat']
-    lon = json_Dict['lon']
-    tst = json_Dict['tst']
+    acc = json_Dict.get['acc', 999]
+    bat = json_Dict.get['batt', 101]
+    lat = json_Dict.get['lat', 0.0]
+    lon = json_Dict.get['lon', 0.0]
+    tst = json_Dict.get['tst', 1]
     
     #Push into DB Table
     dbObj = DatabaseManager()
