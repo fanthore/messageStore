@@ -1,4 +1,4 @@
-# RMEssageStore
+# messageStore
 
 Simple python project to store owtracks location data to sqlite DB
 
