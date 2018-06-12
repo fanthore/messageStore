@@ -19,13 +19,17 @@ sqlite3
 
 ## Starting up
 
+First run *init.py* to create database
+
 ```
 $ python init.py
+
 $ ls owntracks.db
 owntacks.db
+```
+You can display DB schema
+```
 $ sqlite owntracks.db .dump
--- Loading resources from /home/fanthore/.sqliterc
-
 -- Loading resources from /home/fanthore/.sqliterc
 
 PRAGMA foreign_keys=OFF;
