@@ -1,0 +1,9 @@
+[Unit]
+Description="Grabs owntracks location data from mosqitto and pushes it to sqlite"
+
+[Service] 
+Type=simple
+ExecStart=/var/owntracks/messagestore/messagestore.py
+
+[Install]
+WantedBy=multi-user.target

@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 from store_to_db import mqtt_device
 import paho.mqtt.client as mqttClient
 import time
