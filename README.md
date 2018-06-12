@@ -26,6 +26,8 @@ owntacks.db
 $ sqlite owntracks.db .dump
 -- Loading resources from /home/fanthore/.sqliterc
 
+-- Loading resources from /home/fanthore/.sqliterc
+
 PRAGMA foreign_keys=OFF;
 BEGIN TRANSACTION;
 CREATE TABLE MQTT_devices (
@@ -36,11 +38,12 @@ CREATE TABLE MQTT_devices (
   bat integer,
   lat real,
   lon real,
-  tst integer
-, now text);
+  tst integer,
+  now text);
 DELETE FROM sqlite_sequence;
-INSERT INTO "sqlite_sequence" VALUES('MQTT_devices',0);
+INSERT INTO "sqlite_sequence" VALUES('MQTT_devices',3121);
 COMMIT;
+
 
 ```
 ## Running it
