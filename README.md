@@ -48,11 +48,16 @@ COMMIT;
 ```
 ## Running it
 
+Quick way :
 
 ```
-$ python connect.py
+$ python messagestore.py
 Connected to broker
 ```
+
+Better way : 
+
+Better run this as a service using systemctl as you will have better logging, recovery, etc. Refer to **messagestore.service** file to create your service. There are thousands of how-to out there. This one works : [https://www.devdungeon.com/content/creating-systemd-service-files](https://www.devdungeon.com/content/creating-systemd-service-files)
 
 ## License
 
